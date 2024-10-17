@@ -28,10 +28,7 @@ class LinkedList:
         if self.length == 0:
             self.head = new_node
         else:
-            temp = self.head
-            while temp.next is not None:
-                temp = temp.next
-            temp.next = new_node
+            self.tail.next = new_node
         self.tail = new_node
 
         self.length += 1
